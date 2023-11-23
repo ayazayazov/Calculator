@@ -5,42 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="calculator">
-        <div class="output"></div>
+        <div class="output">
+            <p id="output">0</p>
+        </div>
         <div class="input">
             <div class="buttons-row">
-                <button onclick="sound()" class="grey-buttons">AC</button>
-                <button onclick="sound()" class="grey-buttons">+/-</button>
-                <button onclick="sound()" class="grey-buttons">%</button>
-                <button onclick="sound()" class="orange-buttons">÷</button>
+                <button id="ac" onclick="sound()" class="grey-buttons">AC</button>
+                <button id="frontMinus" onclick="sound()" class="grey-buttons">+/-</button>
+                <button id="percentage" onclick="sound()" class="grey-buttons">%</button>
+                <button id="divide" onclick="sound()" class="orange-buttons">÷</button>
             </div>
             <div class="buttons-row">
-                <button onclick="sound()" class="dark-grey-buttons">7</button>
-                <button onclick="sound()" class="dark-grey-buttons">8</button>
-                <button onclick="sound()" class="dark-grey-buttons">9</button>
-                <button onclick="sound()" class="orange-buttons">×</button>
+                <button id="seven" onclick="sound()" class="dark-grey-buttons">7</button>
+                <button id="eight" onclick="sound()" class="dark-grey-buttons">8</button>
+                <button id="nine" onclick="sound()" class="dark-grey-buttons">9</button>
+                <button id="multiply" onclick="sound()" class="orange-buttons">×</button>
             </div>
             <div class="buttons-row">
-                <button onclick="sound()" class="dark-grey-buttons">4</button>
-                <button onclick="sound()" class="dark-grey-buttons">5</button>
-                <button onclick="sound()" class="dark-grey-buttons">6</button>
-                <button onclick="sound()" class="orange-buttons">−</button>
+                <button id="four" onclick="sound()" class="dark-grey-buttons">4</button>
+                <button id="five" onclick="sound()" class="dark-grey-buttons">5</button>
+                <button id="six" onclick="sound()" class="dark-grey-buttons">6</button>
+                <button id="minus" onclick="sound()" class="orange-buttons">−</button>
             </div>
             <div class="buttons-row">
-                <button onclick="sound()" class="dark-grey-buttons">1</button>
-                <button onclick="sound()" class="dark-grey-buttons">2</button>
-                <button onclick="sound()" class="dark-grey-buttons">3</button>
-                <button onclick="sound()" class="orange-buttons">+</button>
+                <button id="one" onclick="sound()" class="dark-grey-buttons">1</button>
+                <button id="two" onclick="sound()" class="dark-grey-buttons">2</button>
+                <button id="three" onclick="sound()" class="dark-grey-buttons">3</button>
+                <button id="plus" onclick="sound()" class="orange-buttons">+</button>
             </div>
             <div class="buttons-row-last">
-                <button onclick="sound()" class="dark-grey-buttons, zero">0</button>
-                <button onclick="sound()" class="dark-grey-buttons">,</button>
-                <button onclick="sound()" class="orange-buttons">=</button>
+                <button id="zero" onclick="sound()" class="dark-grey-buttons, zero">0</button>
+                <button id="point" onclick="sound()" class="dark-grey-buttons">,</button>
+                <button id="equal" onclick="sound()" class="orange-buttons">=</button>
             </div>
         </div>
     </div>

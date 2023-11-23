@@ -32,47 +32,99 @@ let plusActive;
 let minusActive;
 let multiplyActive;
 let divideActive;
+let numCount = 0;
 
 zero.addEventListener("click", function () {
+    if(numCount == 8){
+        alert("Max limit is 8.");
+        return 0;
+      }
     input.push(0);
+    numCount++;
     output.innerText = input.join("");
   });
   one.addEventListener("click", function () {
+    if(numCount == 8){
+        alert("Max limit is 8.");
+        return 0;
+      }
     input.push(1);
+    numCount++;
     output.innerText = input.join("");
   });
   two.addEventListener("click", function () {
+    if(numCount == 8){
+        alert("Max limit is 8.");
+        return 0;
+      }
     input.push(2);
+    numCount++;
     output.innerText = input.join("");
   });
   three.addEventListener("click", function () {
+    if(numCount == 8){
+        alert("Max limit is 8.");
+        return 0;
+      }
     input.push(3);
+    numCount++;
     output.innerText = input.join("");
   });
   four.addEventListener("click", function () {
+    if(numCount == 8){
+        alert("Max limit is 8.");
+        return 0;
+      }
     input.push(4);
+    numCount++;
     output.innerText = input.join("");
   });
   five.addEventListener("click", function () {
+    if(numCount == 8){
+        alert("Max limit is 8.");
+        return 0;
+      }
     input.push(5);
+    numCount++;
     output.innerText = input.join("");
   });
   six.addEventListener("click", function () {
+    if(numCount == 8){
+        alert("Max limit is 8.");
+        return 0;
+      }
     input.push(6);
+    numCount++;
     output.innerText = input.join("");
   });
   seven.addEventListener("click", function () {
+    if(numCount == 8){
+        alert("Max limit is 8.");
+        return 0;
+      }
     input.push(7);
+    numCount++;
     output.innerText = input.join("");
   });
   eight.addEventListener("click", function () {
+    if(numCount == 8){
+        alert("Max limit is 8.");
+        return 0;
+      }
     input.push(8);
+    numCount++;
     output.innerText = input.join("");
   });
   nine.addEventListener("click", function () {
+    if(numCount == 8){
+        alert("Max limit is 8.");
+        return 0;
+      }
     input.push(9);
+    numCount++;
     output.innerText = input.join("");
   });
+
 
   point.addEventListener("click", function () {
     if (output.innerText == 0) {
@@ -99,6 +151,7 @@ zero.addEventListener("click", function () {
     multiplyActive = false;
     temp = 0;
     calc = 0;
+    numCount = 0;
   });
 
 plus.addEventListener("click", function(){
@@ -112,6 +165,7 @@ plus.addEventListener("click", function(){
         temp += (+calc);
         output.textContent = temp;
         input = [];
+        numCount = 0;
         return 0;
     }
     else{
@@ -122,6 +176,7 @@ plus.addEventListener("click", function(){
         input = [];
     }
     plusActive = true;
+    numCount = 0;
 })
 
 minus.addEventListener("click", function(){
@@ -135,6 +190,7 @@ minus.addEventListener("click", function(){
         temp -= (+calc);
         output.textContent = temp;
         input = [];
+        numCount = 0;
         return 0;
     }
      else{
@@ -145,6 +201,7 @@ minus.addEventListener("click", function(){
         input = [];
     }
     minusActive = true;
+    numCount = 0;
 })
 
 multiply.addEventListener("click", function(){
@@ -158,6 +215,7 @@ multiply.addEventListener("click", function(){
         temp *= (+calc);
         output.textContent = temp;
         input = [];
+        numCount = 0;
         return 0;
     }
      else{
@@ -168,6 +226,7 @@ multiply.addEventListener("click", function(){
         input = [];
     }
     multiplyActive = true;
+    numCount = 0;
 })
 
 divide.addEventListener("click", function(){
@@ -179,8 +238,9 @@ divide.addEventListener("click", function(){
     if(divideActive == true){
         calc = input.join("");
         temp /= (+calc);
-        output.textContent = temp;
+        output.textContent = temp.toFixed(7);
         input = [];
+        numCount = 0;
         return 0;
     }
      else{
@@ -191,6 +251,7 @@ divide.addEventListener("click", function(){
         input = [];
     }
     divideActive = true;
+    numCount = 0;
 })
 
 equal.addEventListener("click", function(){
@@ -208,7 +269,7 @@ equal.addEventListener("click", function(){
         } else if(operator == '*'){
             output.textContent = (temp*calc);
         } else if(operator == '/'){
-            output.textContent = (temp/calc);
+            output.textContent = (temp/calc).toFixed(7);
         }
     }
     plusActive = false;
@@ -217,4 +278,5 @@ equal.addEventListener("click", function(){
     multiplyActive = false;
     temp = 0;
     calc = 0;
+    numCount = 0;
 })

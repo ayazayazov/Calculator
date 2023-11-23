@@ -1,0 +1,90 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #000000, #141414, #141414, #000000);
+}
+
+.calculator{
+    border: none;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.output{
+    width: 310px;
+    height: 100px;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons-row{
+    display: flex;
+    gap: 10px;
+}
+.buttons-row-last{
+    display: flex;
+    gap: 10px;
+}
+button{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+.zero{
+    width: 150px;
+    border-radius: 50px;
+    background-color:dimgray;
+    color: white;
+}
+
+.zero:hover{
+    background-color: rgb(133, 133, 133);
+}
+
+.grey-buttons{
+    background-color: lightgray;
+}
+
+.grey-buttons:hover{
+    background-color: white;
+}
+
+.dark-grey-buttons{
+    background-color:dimgray;
+    color: white;
+}
+
+.dark-grey-buttons:hover{
+    background-color: rgb(144, 144, 144);
+}
+
+.orange-buttons{
+    background-color: orange;
+    color: white;
+}
+
+.orange-buttons:hover{
+    background-color: rgb(254, 188, 64);
+}
